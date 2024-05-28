@@ -63,7 +63,13 @@ export const SignUpScreen: React.FC<Props> = ({ navigation }) => {
       {loading ? (
         <ActivityIndicator color={"#000"} animating={true} size="small" />
       ) : (
+        <>
         <Button title="Sign Up" onPress={signUp} />
+        <View style={styles.textContainer}>
+            <Text>Already Have an Account? </Text>
+            <Text style={styles.link} onPress={() => navigation.navigate("Sign In Screen")}>Sign In</Text>
+          </View>
+        </>
       )}
     </View>
   );
@@ -92,5 +98,19 @@ const styles = StyleSheet.create({
   error: {
     color: "red",
     marginBottom: 10,
+  },
+  textContainer: {
+    flexDirection: 'row',
+    marginTop: 10,
+    alignItems: 'baseline',
+    fontSize: 16,
+  },  
+  link: {
+    color: "#007bff",
+    marginTop: 10,
+    fontSize: 16,
+    textDecorationLine: "underline",
+    textDecorationStyle: "solid",
+    textDecorationColor: "#007bff",
   },
 });

@@ -9,8 +9,8 @@ const Stack = createStackNavigator<AuthStackParamList>();
 export const AuthStack = () => {
   return (
     <Stack.Navigator>
-      <Stack.Screen name="Sign In Screen" component={SignInScreen} />
       <Stack.Screen name="Sign Up Screen" component={SignUpScreen} />
+      <Stack.Screen name="Sign In Screen" component={SignInScreen} />
     </Stack.Navigator>
   );
 };
