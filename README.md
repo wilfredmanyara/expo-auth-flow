@@ -5,7 +5,7 @@
 
 ### Navigate to the Project Directory:
 
-cd expo-auth-flow
+`cd expo-auth-flow`
 
 ### Install dependecies:
 
